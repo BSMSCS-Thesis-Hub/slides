@@ -69,8 +69,8 @@ Conversely, state-of-the-art dynamic compression algorithms (like DynFed) base t
 
 - **Emoji Restriction**: Emojis are strictly banned from all repository files, slide decks, and documentation to maintain a professional, human-authored academic standard.
 - **Visual-First Strategy**: Prioritize large visual elements (TikZ block flowcharts, diagrams, tables, or image placeholders) over text blocks. Dedicate slides to a single visual centerpiece with minimal, high-impact titles.
-- **Wording Constraint**: Avoid long paragraphs. Use strictly concise phrases, fragments, or short bullet points (maximum 1-2 lines per item).
+- **Visual Solo Slides**: For slides showing specific milestones/architectures (like the GitHub Organization layout, the Flower framework layout, or the mind map cue), present the image placeholder completely solo. Remove all text points, bullets, and justifications.
+- **Wording Constraint**: Avoid the `<keyword>: <explanation>` pattern in bullet points. Write bullets as natural, concise sentences or phrases. Keep bullets extremely brief, and omit them entirely if they are unnecessary.
+- **Short Slide Titles**: Avoid long titles containing coordinating conjunctions like "and" or ampersands ("&"). Use a single focused noun or split the topic into separate slides.
 - **Placeholder Standards**: Every image placeholder must explicitly direct where to source the graphic (e.g. referencing specific paper figure/table numbers or local files).
 - **Workspace Layout**: All research progress updates are isolated under the `updates/` folder using milestone-based subfolders (e.g. `updates/y3t3w4/`) to keep the repository clean and compile-safe.
-- **Pacing and Slide Separation**: Do not cram multiple distinct milestones or points into a single slide. Break down multi-faceted concepts (such as repository organization, framework selection, and baseline algorithm replication) into separate, dedicated visual-first slides.
-- **No Paper Statistics**: Avoid tracking or presenting metadata stats regarding papers read, gathered, or skimmed (e.g. "27 papers", "19 analyzed"). Progress updates must prioritize core scientific insights, findings, and technical takeaways over administrative reading statistics.

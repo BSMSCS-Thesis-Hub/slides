@@ -19,9 +19,9 @@ This registry tracks the organization of files inside `sections/` and the weekly
 
 ## 2. Thesis Progress Updates & Slides
 
-| Presentation Folder                                                                | Version / Date | Scope of Update                                                                     | Status     | PDF Output                                                                                                                          |
-| :--------------------------------------------------------------------------------- | :------------- | :---------------------------------------------------------------------------------- | :--------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| [updates/y3t3w4/](file:///c:/Users/Quirora/Documents/GitHub/slides/updates/y3t3w4) | Y3T3W4 Update  | Venn Diagram alternative (TikZ block), 3 survey domains, AWS cert, workspace splits | [Complete] | [updates/compiled_pdfs/y3t3w4_update.pdf](file:///c:/Users/Quirora/Documents/GitHub/slides/updates/compiled_pdfs/y3t3w4_update.pdf) |
+| Presentation Folder                                                                | Version / Date | Scope of Update                                                                    | Status     | PDF Output                                                                                                                          |
+| :--------------------------------------------------------------------------------- | :------------- | :--------------------------------------------------------------------------------- | :--------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| [updates/y3t3w4/](file:///c:/Users/Quirora/Documents/GitHub/slides/updates/y3t3w4) | Y3T3W4 Update  | Venn Diagram alternative (domain pillars TikZ), 3 survey domains, workspace splits | [Complete] | [updates/compiled_pdfs/y3t3w4_update.pdf](file:///c:/Users/Quirora/Documents/GitHub/slides/updates/compiled_pdfs/y3t3w4_update.pdf) |
 
 ---
 

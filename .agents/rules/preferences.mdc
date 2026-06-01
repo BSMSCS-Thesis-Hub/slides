@@ -7,13 +7,11 @@ User-defined repository preferences and stylistic constraints that all AI agents
 - **Visual-First Layouts:** Slide layouts must prioritize large visual elements (images, tables, or TikZ block diagrams) over text.
   - Break text-heavy frames into separate, highly focused slides.
   - Dedicate frames to a single large image placeholder with minimal text.
-- **Pacing and Slide Separation:** Do not cram multiple distinct milestones or points into a single slide. Break down multi-faceted concepts (such as repository organization, framework selection, and baseline algorithm replication) into separate, dedicated visual-first slides.
-- **No Paper Statistics:** Avoid tracking or presenting metadata stats regarding papers read, gathered, or skimmed (e.g. "27 papers", "19 analyzed"). Progress updates must prioritize core scientific insights, findings, and technical takeaways over administrative reading statistics.
-- **Visual Placeholders:** When creating image placeholders, explicitly guide the user on where to obtain the visual:
-  - Reference a specific paper from the library, including author, year, and figure/table number (e.g., "Take Figure 2 from Cajas Ordonez et al. 2025").
-  - Indicate if they should source it from the internet (e.g., "Source AWS Badge from the official AWS Certification portal").
-- **Conciseness:** Avoid long, explanatory paragraphs. Use concise bullet fragments or short phrases (maximum 1-2 lines per bullet).
-- **Clean Alignment:** Maintain clean visual layouts for Markdown tables and LaTeX source formatting. Keep BibTeX entries strictly aligned (as seen in [references.bib](file:///c:/Users/Quirora/Documents/GitHub/slides/references.bib)).
+- **Visual Solo Slides:** For slides that show specific milestones or architectures (such as the GitHub Organization layout, the Flower framework layout, or the taxonomy mind map cue), present the image placeholder completely solo on the slide. Remove all text points, bullets, and justifications. Let the image speak for itself.
+- **Wording Constraint:** Avoid the `<keyword>: <explanation>` pattern in itemized lists (e.g., do not write `\item \keyterm{Constraints:} High peak...`). Instead, write all bullet points as natural, concise sentences or phrases (e.g., `\item Local training introduces high peak memory overhead on device.`). Keep bullets extremely brief and omit them entirely if they are unnecessary. Do not default to adding three bullet points per slide.
+- **Short Slide Titles:** Avoid long frame/section titles containing coordinating conjunctions like "and" or ampersands ("&"). Use a single focused noun or split the topic into separate slides (e.g., use `IoT Optimization` instead of `Intelligent Edge & IoT Optimization`).
+- **Placeholder Standards:** Every image placeholder must explicitly direct where to source the graphic (e.g. referencing specific paper figure/table numbers or local files).
+- **Workspace Layout:** All research progress updates are isolated under the `updates/` folder using milestone-based subfolders (e.g. `updates/y3t3w4/`) to keep the repository clean and compile-safe.
 
 ## 2. Preference Tracking
 - Always check this file and the `.agents/rules/` subdirectory for active preferences before making edits or adding content.
