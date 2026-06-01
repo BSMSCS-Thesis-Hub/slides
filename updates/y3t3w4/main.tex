@@ -17,7 +17,7 @@
 % Presentation Metadata
 % ==========================================
 \title{Algorithmic Codesign of Federated Distillation}
-\subtitle{Research Progress Update - Year 3, Trimester 3, Week 3}
+\subtitle{Research Progress Update}
 \author{Christian Joseph Bunyi}
 \institute{Dr. Andrew L. Tan Data Science Institute \\ De La Salle University}
 \date{June 1, 2026}
@@ -110,15 +110,49 @@
         \vspace{0.2cm}
 
         \begin{center}
-            \includegraphics[width=\textwidth]{figures/cajas_fig6.png} \\
-            \vspace{0.15cm}
-            \fontsize{5pt}{6pt}\selectfont
-            Source: Cajas Ordóñez et al. (2025), Figure 6: Resource management on fog/edge computing.
+            \setlength{\fboxrule}{0.5pt}
+            \fbox{
+                \begin{minipage}{0.9\textwidth}
+                    \centering
+                    \vspace{0.6cm}
+                    \fontsize{7.5pt}{9.5pt}\selectfont
+                    \texttt{[Placeholder: Intelligent Edge Systems]} \\
+                    \vspace{0.2cm}
+                    \fontsize{6.5pt}{8.5pt}\selectfont
+                    \textit{Cue: Open Cajas Ordóñez et al. (2025), Figure 6 ("Architectures and algorithms for resource management on a fog/edge computing model") as it is too detailed to fit inline.}
+                    \vspace{0.6cm}
+                \end{minipage}
+            }
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 7: Model Compression (Descriptive Placeholder)
+% Slide 7: Healthcare Wearables (New Visual Slide)
+\begin{frame}{Healthcare Wearables}
+    \begin{columns}[T]
+        \column{0.45\textwidth}
+        \textbf{Clinical Personalization}
+        \begin{itemize}
+            \item Cloud-trained models suffer from reduced generalization across individual patient biometrics.
+            \item Personalized transfer learning adapts general models to user-specific wearable sensor signals.
+            \item Federated transfer loops ensure patient health data remains local and highly secure.
+        \end{itemize}
+
+        \column{0.55\textwidth}
+        \centering
+        \textbf{FedHealth Personalization Loop}
+        \vspace{0.2cm}
+
+        \begin{center}
+            \includegraphics[width=\textwidth]{figures/salman_fig15.png} \\
+            \vspace{0.15cm}
+            \fontsize{5pt}{6pt}\selectfont
+            Source: Salman et al. (2025), Figure 15: Overview of the FedHealth framework.
+        \end{center}
+    \end{columns}
+\end{frame}
+
+% Slide 8: Model Compression (Descriptive Placeholder)
 \begin{frame}{Model Compression}
     \begin{columns}[T]
         \column{0.45\textwidth}
@@ -138,12 +172,12 @@
             \includegraphics[width=\textwidth]{figures/dynfed_fig2.png} \\
             \vspace{0.15cm}
             \fontsize{5pt}{6pt}\selectfont
-            Source: He et al. (2025), Figure 2: DynFed training procedure overview.
+            Source: He et al. (2025), Figure 2: Overview of the training procedure proposed by DynFed.
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 8: Federated Distillation (Descriptive Placeholder)
+% Slide 9: Federated Distillation (Descriptive Placeholder)
 \begin{frame}{Federated Distillation}
     \begin{columns}[T]
         \column{0.45\textwidth}
@@ -163,12 +197,37 @@
             \includegraphics[width=\textwidth]{figures/salman_fig11.png} \\
             \vspace{0.15cm}
             \fontsize{5pt}{6pt}\selectfont
-            Source: Salman et al. (2025), Figure 11: Broadcasting model soft-labels/logits.
+            Source: Salman et al. (2025), Figure 11: Broadcasting model soft-labels/logits considering model heterogeneity.
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 10: Workspace Organization (Solo Visual Slide)
+% Slide 10: Paradigm Comparison (New Visual Slide)
+\begin{frame}{Paradigm Comparison}
+    \begin{columns}[T]
+        \column{0.45\textwidth}
+        \textbf{Federated Distillation Taxonomy}
+        \begin{itemize}
+            \item Feature-based FD shares only model outputs, significantly reducing communication overhead.
+            \item Parameter-based FD uploads student networks, addressing model fusion constraints.
+            \item Data-based FD exchanges synthetic datasets, lowering local compute costs.
+        \end{itemize}
+
+        \column{0.55\textwidth}
+        \centering
+        \textbf{KD-based Federated Learning Comparison}
+        \vspace{0.2cm}
+
+        \begin{center}
+            \includegraphics[width=\textwidth]{figures/qin_fig5.png} \\
+            \vspace{0.15cm}
+            \fontsize{5pt}{6pt}\selectfont
+            Source: Qin et al. (2025), Figure 5: Comparison of the three KD-based FL methods.
+        \end{center}
+    \end{columns}
+\end{frame}
+
+% Slide 11: Workspace Organization (Solo Visual Slide)
 \begin{frame}{Workspace Organization}
     \centering
     \vfill
@@ -178,7 +237,7 @@
     \vfill
 \end{frame}
 
-% Slide 11: Simulation Framework (Solo Visual Slide)
+% Slide 12: Simulation Framework (Solo Visual Slide)
 \begin{frame}{Simulation Framework}
     \centering
     \vfill
@@ -188,31 +247,16 @@
     \vfill
 \end{frame}
 
-% Slide 12: Baseline Replication
+% Slide 13: Baseline Replication
 \begin{frame}[fragile]{Baseline Replication}
     \begin{columns}[T]
         \column{0.48\textwidth}
         \textbf{Local Baseline Execution}
         \begin{itemize}
             \item Replicated classic FedAvg and FedProx optimization baselines successfully on local hardware.
-            \item Configured standard SGD optimizers and proximal penalty metrics.
+            \item Configured standard SGD optimizers on wearable sensor datasets.
+            \item Validated training and inference pipelines under varying local epoch configurations.
         \end{itemize}
-
-        \begin{table}
-            \centering
-            \fontsize{6.5pt}{8pt}\selectfont
-            \caption{Local Baseline Replication Setup}
-            \begin{tabular}{lcc}
-                \toprule
-                \textbf{Parameter}       & \textbf{FedAvg} & \textbf{FedProx} \\
-                \midrule
-                Local Epochs             & $5$             & $5$              \\
-                Optimizer                & SGD             & SGD              \\
-                Proximal Penalty ($\mu$) & --              & $0.01$           \\
-                Status                   & Replicated      & Replicated       \\
-                \bottomrule
-            \end{tabular}
-        \end{table}
 
         \column{0.52\textwidth}
         \centering
@@ -225,7 +269,7 @@
     \end{columns}
 \end{frame}
 
-% Slide 13: Standout Wrap-Up / Q&A
+% Slide 14: Standout Wrap-Up / Q&A
 \begin{frame}[standout]
     Thank You!
     \vspace{0.5cm}
