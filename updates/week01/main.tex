@@ -1,0 +1,167 @@
+\documentclass[10pt, aspectratio=169]{beamer}
+
+% ==========================================
+% Theme & Color Settings (Moloch Theme)
+% ==========================================
+\usetheme{moloch}
+\usecolortheme{moloch}
+
+% ==========================================
+% Modular Preambles & Configurations (Relative)
+% ==========================================
+\input{../../preamble/packages.tex}
+\input{../../preamble/macros.tex}
+\input{../../preamble/listings-setup.tex}
+
+% ==========================================
+% Presentation Metadata
+% ==========================================
+\title{Algorithmic Codesign of Federated Distillation}
+\subtitle{Research Progress Update - Week 1}
+\author{Christian Joseph Bunyi}
+\institute{Dr. Andrew L. Tan Data Science Institute \\ De La Salle University}
+\date{June 1, 2026}
+
+% ==========================================
+% Slide Deck Document Structure
+% ==========================================
+\begin{document}
+
+% Slide 1: Title Slide
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% Slide 2: Research Domain & Intersection (Venn Diagram)
+\begin{frame}{Research Domain \& Intersection}
+    \begin{columns}[T]
+        \column{0.48\textwidth}
+        \textbf{Domain Formulation}
+        \begin{itemize}
+            \item \keyterm{Federated Distillation (FD):} High-performance decentralized knowledge distillation for communication efficiency.
+            \item \keyterm{Healthcare IoT (IoMT):} Low-resource smart wearables with strict peak memory limits.
+            \item \keyterm{Adaptive Codesign:} Finding optimal, data-aware quantization rates dynamically.
+        \end{itemize}
+        \vspace{0.3cm}
+        Our research operates precisely at the triple intersection of these key domains.
+
+        \column{0.52\textwidth}
+        \centering
+        \input{figures/tikz/venn_diagram.tex}
+    \end{columns}
+\end{frame}
+
+% Slide 3: Literature Survey & Mind Map
+\begin{frame}{Literature Landscape \& High-Level Mind Map}
+    \begin{columns}[T]
+        \column{0.5\textwidth}
+        \textbf{Literature Survey Key Findings}
+        \begin{itemize}
+            \item Audited 27 papers spanning edge optimization, model compression, and clinical healthcare systems.
+            \item Identified the \keyterm{Compression-Utility Trade-off} as a significant gap: static baseline algorithms destroy fine-grained activity recognition features.
+            \item Created a detailed hierarchical taxonomy of literature gaps and hardware limits.
+        \end{itemize}
+
+        \column{0.5\textwidth}
+        \centering
+        \textbf{Taxonomy Mind Map Preview}
+        \vspace{0.2cm}
+
+        \begin{block}{Interactive Mind Map Access}
+            The full interactive mind map is hosted on your research space. Access full links or local documentation in the workspace.
+        \end{block}
+
+        \vspace{0.2cm}
+        % User Placeholder for Mind Map Screenshot
+        \begin{center}
+            \setlength{\fboxrule}{0.5pt}
+            \fbox{
+                \begin{minipage}{0.8\textwidth}
+                    \centering
+                    \vspace{0.4cm}
+                    \fontsize{7pt}{9pt}\selectfont
+                    \texttt{[Placeholder: Replace with mind map graphic]} \\
+                    \vspace{0.1cm}
+                    \texttt{https://github.com/your-org/mindmap}
+                    \vspace{0.4cm}
+                \end{minipage}
+            }
+        \end{center}
+    \end{columns}
+\end{frame}
+
+% Slide 4: Systems & Cloud Infrastructure
+\begin{frame}{Systems \& Infrastructure Milestones}
+    \begin{block}{AWS Certified Solutions Architect - Associate}
+        Successfully achieved the AWS Solutions Architect certification. Validates core competencies in scalable compute clusters, secure multi-tenant network designs, and low-latency storage architectures.
+    \end{block}
+
+    \vspace{0.3cm}
+    \textbf{Research Workspace Infrastructures}
+    \begin{itemize}
+        \item Created a dedicated research GitHub organization to host all simulation repositories and ensure complete reproducibility.
+        \item Mapped global server aggregation mechanisms to AWS EC2 instance scaling to ensure our edge simulation matches real-world cloud architectures.
+    \end{itemize}
+\end{frame}
+
+% Slide 5: FL Simulation & Baseline Replication
+\begin{frame}[fragile]{FL Framework Decision \& Baseline Replication}
+    \begin{columns}[T]
+        \column{0.5\textwidth}
+        \textbf{Flower Simulation Framework}
+        \begin{itemize}
+            \item Formally selected \keyterm{Flower} as our FL simulation engine.
+            \item Chosen for its modular client-side orchestrations and native support for heterogeneous IoT nodes.
+        \end{itemize}
+
+        \vspace{0.2cm}
+        \textbf{Baseline Algorithmic Replications}
+        \begin{itemize}
+            \item Successfully replicated classic Federated Averaging (\texttt{FedAvg}) and Federated Proximal (\texttt{FedProx}) on local hardware.
+        \end{itemize}
+
+        \column{0.5\textwidth}
+        \centering
+        \begin{table}
+            \centering
+            \caption{Local Baseline Replication Setup}
+            \begin{tabular}{lcc}
+                \toprule
+                \textbf{Parameter} & \textbf{FedAvg} & \textbf{FedProx} \\
+                \midrule
+                Local Epochs & $5$ & $5$ \\
+                Optimizer & SGD & SGD \\
+                Proximal Penalty ($\mu$) & -- & $0.01$ \\
+                Status & Replicated & Replicated \\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+    \end{columns}
+\end{frame}
+
+% Slide 6: Next Steps & Challenges
+\begin{frame}{Next Steps \& Expected Challenges}
+    \textbf{Immediate Objectives (Week 2)}
+    \begin{itemize}
+        \item Formulate the exact mathematical metrics for client-side data complexity (such as class-based Shannon entropy or Earth Mover's Distance).
+        \item Define the data-aware decision tree logic within the adaptive controller.
+    \end{itemize}
+
+    \vspace{0.3cm}
+    \textbf{Key Expected Challenges}
+    \begin{itemize}
+        \item Preserving critical activity recognition features under highly skewed patient datasets (statistical non-IID conditions) without violating privacy boundaries.
+    \end{itemize}
+\end{frame}
+
+% Slide 7: Q&A / Standout Frame
+\begin{frame}[standout]
+    Thank You!
+    \vspace{0.5cm}
+
+    \begin{center}
+        \large Questions \& Answers
+    \end{center}
+\end{frame}
+
+\end{document}
