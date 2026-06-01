@@ -1,0 +1,34 @@
+\begin{tikzpicture}[node distance=1.2cm, auto, >=Stealth, thick]
+    % Define theme-harmonious soft colors
+    \definecolor{colorfd}{RGB}{111,168,220}      % Soft blue
+    \definecolor{coloriot}{RGB}{147,196,125}     % Soft green
+    \definecolor{coloropt}{RGB}{224,102,102}     % Soft red/rose
+    \definecolor{colortarget}{RGB}{246,178,107}  % Soft orange
+
+    % Three Pillar Nodes (Stacked/relative horizontal flow)
+    \node[draw=colorfd, fill=colorfd!15, rounded corners, minimum width=3.2cm, minimum height=1.2cm, align=center] (fd) {
+        \textbf{Federated Distillation}\\
+        \fontsize{7.5pt}{9.5pt}\selectfont Gradient-Free Soft-Labels
+    };
+
+    \node[draw=coloriot, fill=coloriot!15, rounded corners, minimum width=3.2cm, minimum height=1.2cm, align=center, right=0.6cm of fd] (iot) {
+        \textbf{Healthcare IoT (IoMT)}\\
+        \fontsize{7.5pt}{9.5pt}\selectfont Device Resource Bounds
+    };
+
+    \node[draw=coloropt, fill=coloropt!15, rounded corners, minimum width=3.2cm, minimum height=1.2cm, align=center, right=0.6cm of iot] (opt) {
+        \textbf{Adaptive Optimization}\\
+        \fontsize{7.5pt}{9.5pt}\selectfont Client Data Heterogeneity
+    };
+
+    % Target Unified Focus Node (Proposed Co-design) centered below
+    \node[draw=colortarget, fill=colortarget!15, rounded corners, minimum width=7.5cm, minimum height=1.3cm, align=center, below=1.2cm of iot] (target) {
+        \textbf{Proposed Algorithmic Co-design}\\
+        \fontsize{8.5pt}{10.5pt}\selectfont \keyterm{Hybrid Data- and Resource-Aware Quantization}
+    };
+
+    % Connecting Arrows
+    \draw[->, thick, colorfd] (fd.south) -- (target.north west);
+    \draw[->, thick, coloriot] (iot.south) -- (target.north);
+    \draw[->, thick, coloropt] (opt.south) -- (target.north east);
+\end{tikzpicture}
