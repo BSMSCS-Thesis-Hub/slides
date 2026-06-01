@@ -32,8 +32,8 @@
     \titlepage
 \end{frame}
 
-% Slide 2: Research Domain Convergence (TikZ 3-Pillar Diagram)
-\begin{frame}{Research Domain Convergence}
+% Slide 2: Research Domains (TikZ 3-Pillar Diagram)
+\begin{frame}{Research Domains}
     \centering
     \input{figures/tikz/domain_pillars.tex}
     \vspace{0.4cm}
@@ -43,49 +43,65 @@
     \end{center}
 \end{frame}
 
-% Slide 3: Literature Landscape & Key Research Gaps
-\begin{frame}{Literature Landscape \& Key Research Gaps}
+% Slide 4: Literature Landscape
+\begin{frame}{Literature Landscape}
     \begin{columns}[T]
         \column{0.45\textwidth}
         \textbf{The Compression-Utility Trade-off}
         \begin{itemize}
-            \item \keyterm{Core Limitation:} Static compression baseline methods destroy fine-grained activity recognition features.
-            \item \keyterm{Literature Gap:} Hardware-only dynamic triggers blindly over-compress critical motion data in skewed settings.
-            \item \keyterm{Objective:} Balancing communication savings with patient fall-recognition accuracy.
+            \item Static compression baseline methods destroy fine-grained activity recognition features.
+            \item Hardware-only dynamic triggers blindly over-compress critical motion data in skewed settings.
+            \item We aim to balance communication savings with patient fall-recognition accuracy.
         \end{itemize}
 
         \column{0.55\textwidth}
         \centering
-        \textbf{Taxonomy Mind Map}
+        \textbf{Literature Gaps}
         \vspace{0.2cm}
 
         \begin{center}
-            \setlength{\fboxrule}{0.5pt}
-            \fbox{
-                \begin{minipage}{0.9\textwidth}
-                    \centering
-                    \vspace{0.6cm}
-                    \fontsize{7.5pt}{9.5pt}\selectfont
-                    \texttt{[Placeholder: Miro Mind Map Graphic]} \\
-                    \vspace{0.2cm}
-                    \fontsize{6.5pt}{8.5pt}\selectfont
-                    \textit{Source: Export full Miro canvas mind map detailing research dimensions}
-                    \vspace{0.6cm}
-                \end{minipage}
-            }
+            \includegraphics[width=\textwidth]{figures/qin_fig9.png} \\
+            \vspace{0.15cm}
+            \fontsize{5pt}{6pt}\selectfont
+            Source: Qin et al. (2025), Figure 9: Relationships between challenges in FL.
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 4: Domain 1 — Intelligent Edge Computing & IoT Optimization
-\begin{frame}{Intelligent Edge \& IoT Optimization}
+% Slide 5: Taxonomy Mind Map (Solo Visual Cue)
+\begin{frame}{Mind Maps}
+    \centering
+    \vfill
+    \begin{center}
+        \setlength{\fboxrule}{0.5pt}
+        \fbox{
+            \begin{minipage}{0.65\textwidth}
+                \centering
+                \vspace{1.2cm}
+                \fontsize{10pt}{12pt}\selectfont
+                \texttt{[Placeholder]} \\
+                \vspace{0.4cm}
+                \fontsize{8pt}{10pt}\selectfont
+                \textit{Cue: Open NotebookLM mind maps.} \\
+                \vspace{0.15cm}
+                \fontsize{7.5pt}{9.5pt}\selectfont
+                \url{https://notebooklm.google.com/notebook/96030b06-c526-477e-8282-d3ca7c50ee92?authuser=1}
+                \vspace{1.2cm}
+            \end{minipage}
+        }
+    \end{center}
+    \vfill
+\end{frame}
+
+% Slide 6: IoT Optimization (Descriptive Placeholder)
+\begin{frame}{IoT Optimization}
     \begin{columns}[T]
         \column{0.45\textwidth}
-        \textbf{Domain Summary}
+        \textbf{Edge System Constraints}
         \begin{itemize}
-            \item \keyterm{Constraints:} High peak memory overhead during local training.
-            \item \keyterm{Hardware Limits:} Strict energy and bandwidth exhaustions on wearables.
-            \item \keyterm{Key Finding:} Fixed scheduling is highly suboptimal for variable edge networks.
+            \item Smart wearable sensors suffer from strict energy boundaries and battery exhaustion.
+            \item High peak memory overhead limits active local training loops directly on edge devices.
+            \item Suboptimal fixed scheduling policies fail under highly variable and heterogeneous networks.
         \end{itemize}
 
         \column{0.55\textwidth}
@@ -94,32 +110,23 @@
         \vspace{0.2cm}
 
         \begin{center}
-            \setlength{\fboxrule}{0.5pt}
-            \fbox{
-                \begin{minipage}{0.9\textwidth}
-                    \centering
-                    \vspace{0.6cm}
-                    \fontsize{7.5pt}{9.5pt}\selectfont
-                    \texttt{[Placeholder: Intelligent Edge Systems]} \\
-                    \vspace{0.2cm}
-                    \fontsize{6.5pt}{8.5pt}\selectfont
-                    \textit{Reference: Retrieve Figure 2 (Edge Scheduling Layers) from Cajas Ordonez et al. 2025}
-                    \vspace{0.6cm}
-                \end{minipage}
-            }
+            \includegraphics[width=\textwidth]{figures/cajas_fig6.png} \\
+            \vspace{0.15cm}
+            \fontsize{5pt}{6pt}\selectfont
+            Source: Cajas Ordóñez et al. (2025), Figure 6: Resource management on fog/edge computing.
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 5: Domain 2 — Model Compression in Federated Learning
-\begin{frame}{Model Compression in Federated Learning}
+% Slide 7: Model Compression (Descriptive Placeholder)
+\begin{frame}{Model Compression}
     \begin{columns}[T]
         \column{0.45\textwidth}
-        \textbf{Compression Methods}
+        \textbf{Compression Gaps}
         \begin{itemize}
-            \item \keyterm{Primary Tools:} Quantization, sparsification, and pruning algorithms.
-            \item \keyterm{Gap:} Standard static compression destroys fine-grained local motion features.
-            \item \keyterm{Need:} Dynamic feedback loops reflecting client data variance.
+            \item Traditional quantization and pruning techniques significantly reduce client-side overhead.
+            \item Over-compression destroys life-critical local movement features on low-resource wearables.
+            \item Active dynamic feedback loops are necessary to adapt to statistical client data variance.
         \end{itemize}
 
         \column{0.55\textwidth}
@@ -128,32 +135,23 @@
         \vspace{0.2cm}
 
         \begin{center}
-            \setlength{\fboxrule}{0.5pt}
-            \fbox{
-                \begin{minipage}{0.9\textwidth}
-                    \centering
-                    \vspace{0.6cm}
-                    \fontsize{7.5pt}{9.5pt}\selectfont
-                    \texttt{[Placeholder: Compression Taxonomy]} \\
-                    \vspace{0.2cm}
-                    \fontsize{6.5pt}{8.5pt}\selectfont
-                    \textit{Reference: Retrieve Figure 4 (Taxonomy of Compression in FL) from Le et al. 2024}
-                    \vspace{0.6cm}
-                \end{minipage}
-            }
+            \includegraphics[width=\textwidth]{figures/dynfed_fig2.png} \\
+            \vspace{0.15cm}
+            \fontsize{5pt}{6pt}\selectfont
+            Source: He et al. (2025), Figure 2: DynFed training procedure overview.
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 6: Domain 3 — Federated Distillation (FD) Frameworks
-\begin{frame}{Federated Distillation (FD) Frameworks}
+% Slide 8: Federated Distillation (Descriptive Placeholder)
+\begin{frame}{Federated Distillation}
     \begin{columns}[T]
         \column{0.45\textwidth}
         \textbf{Distillation Mechanics}
         \begin{itemize}
-            \item \keyterm{Exchange:} Transfers soft-label logits rather than raw network weights.
-            \item \keyterm{Bandwidth:} Drastically reduces transmission sizes on channels.
-            \item \keyterm{Robustness:} Mitigates client statistical skew (non-IID) during aggregation.
+            \item Client nodes exchange soft-label logits rather than raw network weights.
+            \item Transmission sizes on communication channels are drastically minimized.
+            \item Logit aggregation naturally mitigates label skew under non-IID conditions.
         \end{itemize}
 
         \column{0.55\textwidth}
@@ -162,121 +160,42 @@
         \vspace{0.2cm}
 
         \begin{center}
-            \setlength{\fboxrule}{0.5pt}
-            \fbox{
-                \begin{minipage}{0.9\textwidth}
-                    \centering
-                    \vspace{0.6cm}
-                    \fontsize{7.5pt}{9.5pt}\selectfont
-                    \texttt{[Placeholder: Logit Distillation Flow]} \\
-                    \vspace{0.2cm}
-                    \fontsize{6.5pt}{8.5pt}\selectfont
-                    \textit{Reference: Retrieve Figure 1 (Logit Aggregation Scheme) from Salman et al. 2025}
-                    \vspace{0.6cm}
-                \end{minipage}
-            }
+            \includegraphics[width=\textwidth]{figures/salman_fig11.png} \\
+            \vspace{0.15cm}
+            \fontsize{5pt}{6pt}\selectfont
+            Source: Salman et al. (2025), Figure 11: Broadcasting model soft-labels/logits.
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 7: AWS Certified Solutions Architect - Associate Certification
-\begin{frame}{AWS Solutions Architect - Associate}
+% Slide 10: Workspace Organization (Solo Visual Slide)
+\begin{frame}{Workspace Organization}
     \centering
     \vfill
     \begin{center}
-        \setlength{\fboxrule}{0.5pt}
-        \fbox{
-            \begin{minipage}{0.6\textwidth}
-                \centering
-                \vspace{1.5cm}
-                \fontsize{10pt}{12pt}\selectfont
-                \texttt{[Placeholder: Official AWS Badge Image]} \\
-                \vspace{0.4cm}
-                \fontsize{8pt}{10pt}\selectfont
-                \textit{Source: Official Credly AWS Certification Badge from the internet}
-                \vspace{1.5cm}
-            \end{minipage}
-        }
+        \includegraphics[height=0.75\textheight,keepaspectratio]{figures/github_org.png}
     \end{center}
     \vfill
 \end{frame}
 
-% Slide 8: Workspace & Repository Organization (Split A)
-\begin{frame}{Workspace \& Repository Organization}
-    \begin{columns}[T]
-        \column{0.45\textwidth}
-        \textbf{Workspace Management}
-        \begin{itemize}
-            \item \keyterm{Collaboration:} Set up a dedicated, clean GitHub organization containing all research-level repositories.
-            \item \keyterm{Consistency:} Aligns all environment scripts and code baselines across human and agentic developers.
-            \item \keyterm{Reproducibility:} Establishes standardized folder conventions to support automated checks.
-        \end{itemize}
-
-        \column{0.55\textwidth}
-        \centering
-        \textbf{GitHub Repository Layout}
-        \vspace{0.2cm}
-
-        \begin{center}
-            \setlength{\fboxrule}{0.5pt}
-            \fbox{
-                \begin{minipage}{0.9\textwidth}
-                    \centering
-                    \vspace{0.6cm}
-                    \fontsize{7.5pt}{9.5pt}\selectfont
-                    \texttt{[Placeholder: GitHub Organization Structure]} \\
-                    \vspace{0.2cm}
-                    \fontsize{6.5pt}{8.5pt}\selectfont
-                    \textit{Source: Take screenshot of your GitHub organization listing repositories}
-                    \vspace{0.6cm}
-                \end{minipage}
-            }
-        \end{center}
-    \end{columns}
+% Slide 11: Simulation Framework (Solo Visual Slide)
+\begin{frame}{Simulation Framework}
+    \centering
+    \vfill
+    \begin{center}
+        \includegraphics[height=0.75\textheight,keepaspectratio]{figures/flower_arch.png}
+    \end{center}
+    \vfill
 \end{frame}
 
-% Slide 9: Simulation Framework Selection - Flower (Split B)
-\begin{frame}{Simulation Framework Selection}
-    \begin{columns}[T]
-        \column{0.45\textwidth}
-        \textbf{Flower FL Framework}
-        \begin{itemize}
-            \item \keyterm{Modularity:} Selected \texttt{Flower} due to its clean client-side abstractions.
-            \item \keyterm{IoT Scaling:} Lightweight local orchestrations, perfectly reflecting wearable memory limitations.
-            \item \keyterm{Heterogeneity:} Seamlessly simulates statistical skew on client nodes.
-        \end{itemize}
-
-        \column{0.55\textwidth}
-        \centering
-        \textbf{Flower Architecture}
-        \vspace{0.2cm}
-
-        \begin{center}
-            \setlength{\fboxrule}{0.5pt}
-            \fbox{
-                \begin{minipage}{0.9\textwidth}
-                    \centering
-                    \vspace{0.6cm}
-                    \fontsize{7.5pt}{9.5pt}\selectfont
-                    \texttt{[Placeholder: Flower Core Architecture Diagram]} \\
-                    \vspace{0.2cm}
-                    \fontsize{6.5pt}{8.5pt}\selectfont
-                    \textit{Source: Grab screenshot of Flower architecture diagram from flower.ai}
-                    \vspace{0.6cm}
-                \end{minipage}
-            }
-        \end{center}
-    \end{columns}
-\end{frame}
-
-% Slide 10: Baseline Replication & Validation (Split C)
-\begin{frame}[fragile]{Baseline Replication \& Validation}
+% Slide 12: Baseline Replication
+\begin{frame}[fragile]{Baseline Replication}
     \begin{columns}[T]
         \column{0.48\textwidth}
         \textbf{Local Baseline Execution}
         \begin{itemize}
-            \item \keyterm{FedAvg \& FedProx:} Replicated both classic baseline models successfully on local hardware.
-            \item \keyterm{Parameter Tuning:} Configured SGD optimizers and proximal penalty metrics.
+            \item Replicated classic FedAvg and FedProx optimization baselines successfully on local hardware.
+            \item Configured standard SGD optimizers and proximal penalty metrics.
         \end{itemize}
 
         \begin{table}
@@ -301,24 +220,12 @@
         \vspace{0.2cm}
 
         \begin{center}
-            \setlength{\fboxrule}{0.5pt}
-            \fbox{
-                \begin{minipage}{0.9\textwidth}
-                    \centering
-                    \vspace{0.5cm}
-                    \fontsize{7.5pt}{9.5pt}\selectfont
-                    \texttt{[Placeholder: Loss/Accuracy Plots]} \\
-                    \vspace{0.15cm}
-                    \fontsize{6.5pt}{8.5pt}\selectfont
-                    \textit{Source: Insert replicated loss/accuracy curves plotted from local logs}
-                    \vspace{0.5cm}
-                \end{minipage}
-            }
+            \includegraphics[width=\textwidth]{figures/baseline_plots.png}
         \end{center}
     \end{columns}
 \end{frame}
 
-% Slide 11: Standout Wrap-Up / Q&A
+% Slide 13: Standout Wrap-Up / Q&A
 \begin{frame}[standout]
     Thank You!
     \vspace{0.5cm}
