@@ -12,7 +12,25 @@ User-defined repository preferences and stylistic constraints that all AI agents
 - **Short Slide Titles:** Avoid long frame/section titles containing coordinating conjunctions like "and" or ampersands ("&"). Use a single focused noun or split the topic into separate slides (e.g., use `IoT Optimization` instead of `Intelligent Edge & IoT Optimization`).
 - **Placeholder Standards:** Every image placeholder must explicitly direct where to source the graphic (e.g. referencing specific paper figure/table numbers or local files).
 - **Workspace Layout:** All research progress updates are isolated under the `updates/` folder using milestone-based subfolders (e.g. `updates/y3t3w4/`) to keep the repository clean and compile-safe.
+- **Large Image Space Layout:** In presentation slides, maximize vertical space for figures and diagrams.
+  - Set image height scaling to at least `0.7\textheight`.
+  - Avoid using the standard LaTeX `center` environment (`\begin{center} ... \end{center}`) as it introduces significant top/bottom list padding. Use `\centering` and manual font/group blocks instead.
+- **Citation and Insight Ordering:** Place the academic figure citation directly below the corresponding image (smaller font, e.g. `5.5pt`), followed by the insight phrase at the very bottom (slightly larger font, e.g. `8pt`).
 
 ## 2. Preference Tracking
 - Always check this file and the `.agents/rules/` subdirectory for active preferences before making edits or adding content.
 - Update this file whenever the user communicates new structural, styling, or workflow preferences.
+
+## 3. Agent Instructions: Presentation Update Generation Guide
+
+### 3.1. Scope and Structure
+- **Target:** A 5-10 minute progress update focusing strictly on key literature highlights and architectural building blocks.
+- **Flow:** Ordered logically by topic from the "macro" domain problem down to the "micro" algorithmic solution, concluding with real-world deployment. Do not force content into a strict slide-by-slide format.
+- **Omissions:** Skip all basic foundational concepts (e.g., defining standard Federated Learning or KD) as the panel already knows them.
+- **Inclusions:** Always include a "Commitments for This Week" slide at the end before the final thank you slide.
+
+### 3.2. Visuals & Insight Phrases (Strict Formatting)
+- **Visuals:** Provide exactly 1 highly relevant figure, table, or diagram per concept. Always provide the exact [Figure/Table Number] and [Author, Year] so they can be easily extracted. Avoid overly text-heavy tables unless necessary.
+- **Insight Phrases:** Every visual must be paired with exactly one "insight phrase."
+- **Stylistic Constraint:** Insight phrases must be declarative, factual, and objective scientific statements (e.g., "Energy management is a primary challenge in urban environments" rather than "This paper positions energy management as...").
+- **Zero Fluff:** Strictly omit all flowery, hyperbolic, or unnecessary adjectives (avoid words like massive, extreme, strictly, optimal, inherently).
